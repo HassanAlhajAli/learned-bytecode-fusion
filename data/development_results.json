@@ -1,0 +1,280 @@
+{
+  "question": "Can an RL policy select useful bytecode fusions for unseen expressions?",
+  "train_programs": 12,
+  "test_programs": 4,
+  "fusion_budget": 2,
+  "candidate_sets": 36,
+  "fixed_train_best_mask": 18,
+  "methods": {
+    "fixed_train_best": {
+      "geometric_mean_speedup": 1.0691895400373692,
+      "cases": {
+        "heldout_affine": {
+          "mask": 18,
+          "fusion_names": [
+            "constant+multiply",
+            "load_y+add"
+          ],
+          "speedup": 1.1257567983581325,
+          "baseline_ns_per_item": 4.3882,
+          "chosen_ns_per_item": 3.898
+        },
+        "heldout_offset": {
+          "mask": 18,
+          "fusion_names": [
+            "constant+multiply",
+            "load_y+add"
+          ],
+          "speedup": 1.0819066037199248,
+          "baseline_ns_per_item": 11.4126,
+          "chosen_ns_per_item": 10.5486
+        },
+        "heldout_product": {
+          "mask": 18,
+          "fusion_names": [
+            "constant+multiply",
+            "load_y+add"
+          ],
+          "speedup": 1.104188451812841,
+          "baseline_ns_per_item": 11.6154,
+          "chosen_ns_per_item": 10.5194
+        },
+        "heldout_subtract": {
+          "mask": 18,
+          "fusion_names": [
+            "constant+multiply",
+            "load_y+add"
+          ],
+          "speedup": 0.9717202534616288,
+          "baseline_ns_per_item": 4.9686,
+          "chosen_ns_per_item": 5.1132
+        }
+      }
+    },
+    "pair_frequency_greedy": {
+      "geometric_mean_speedup": 1.8564044827949568,
+      "cases": {
+        "heldout_affine": {
+          "mask": 3,
+          "fusion_names": [
+            "constant+add",
+            "constant+multiply"
+          ],
+          "speedup": 1.268559204440333,
+          "baseline_ns_per_item": 4.3882,
+          "chosen_ns_per_item": 3.4592
+        },
+        "heldout_offset": {
+          "mask": 3,
+          "fusion_names": [
+            "constant+add",
+            "constant+multiply"
+          ],
+          "speedup": 2.583906900923745,
+          "baseline_ns_per_item": 11.4126,
+          "chosen_ns_per_item": 4.4168
+        },
+        "heldout_product": {
+          "mask": 3,
+          "fusion_names": [
+            "constant+add",
+            "constant+multiply"
+          ],
+          "speedup": 2.509159249978398,
+          "baseline_ns_per_item": 11.6154,
+          "chosen_ns_per_item": 4.6292
+        },
+        "heldout_subtract": {
+          "mask": 68,
+          "fusion_names": [
+            "constant+subtract",
+            "load_y+multiply"
+          ],
+          "speedup": 1.4440246454312953,
+          "baseline_ns_per_item": 4.9686,
+          "chosen_ns_per_item": 3.4408
+        }
+      }
+    },
+    "test_oracle_36_measurements": {
+      "geometric_mean_speedup": 1.9075428346290815,
+      "cases": {
+        "heldout_affine": {
+          "mask": 3,
+          "fusion_names": [
+            "constant+add",
+            "constant+multiply"
+          ],
+          "speedup": 1.268559204440333,
+          "baseline_ns_per_item": 4.3882,
+          "chosen_ns_per_item": 3.4592
+        },
+        "heldout_offset": {
+          "mask": 3,
+          "fusion_names": [
+            "constant+add",
+            "constant+multiply"
+          ],
+          "speedup": 2.583906900923745,
+          "baseline_ns_per_item": 11.4126,
+          "chosen_ns_per_item": 4.4168
+        },
+        "heldout_product": {
+          "mask": 129,
+          "fusion_names": [
+            "constant+add",
+            "multiply+add"
+          ],
+          "speedup": 2.797273865716212,
+          "baseline_ns_per_item": 11.6154,
+          "chosen_ns_per_item": 4.1524
+        },
+        "heldout_subtract": {
+          "mask": 68,
+          "fusion_names": [
+            "constant+subtract",
+            "load_y+multiply"
+          ],
+          "speedup": 1.4440246454312953,
+          "baseline_ns_per_item": 4.9686,
+          "chosen_ns_per_item": 3.4408
+        }
+      }
+    },
+    "policy_gradient_seed_7": {
+      "geometric_mean_speedup": 1.8552255407053468,
+      "cases": {
+        "heldout_affine": {
+          "mask": 3,
+          "fusion_names": [
+            "constant+add",
+            "constant+multiply"
+          ],
+          "speedup": 1.268559204440333,
+          "baseline_ns_per_item": 4.3882,
+          "chosen_ns_per_item": 3.4592
+        },
+        "heldout_offset": {
+          "mask": 9,
+          "fusion_names": [
+            "constant+add",
+            "load_x+add"
+          ],
+          "speedup": 2.5287157670832223,
+          "baseline_ns_per_item": 11.4126,
+          "chosen_ns_per_item": 4.5132
+        },
+        "heldout_product": {
+          "mask": 65,
+          "fusion_names": [
+            "constant+add",
+            "load_y+multiply"
+          ],
+          "speedup": 2.733421188873723,
+          "baseline_ns_per_item": 11.6154,
+          "chosen_ns_per_item": 4.2494
+        },
+        "heldout_subtract": {
+          "mask": 132,
+          "fusion_names": [
+            "constant+subtract",
+            "multiply+add"
+          ],
+          "speedup": 1.3510441592342832,
+          "baseline_ns_per_item": 4.9686,
+          "chosen_ns_per_item": 3.6776
+        }
+      }
+    },
+    "policy_gradient_seed_17": {
+      "geometric_mean_speedup": 1.88735750366445,
+      "cases": {
+        "heldout_affine": {
+          "mask": 3,
+          "fusion_names": [
+            "constant+add",
+            "constant+multiply"
+          ],
+          "speedup": 1.268559204440333,
+          "baseline_ns_per_item": 4.3882,
+          "chosen_ns_per_item": 3.4592
+        },
+        "heldout_offset": {
+          "mask": 10,
+          "fusion_names": [
+            "constant+multiply",
+            "load_x+add"
+          ],
+          "speedup": 2.5341060484945377,
+          "baseline_ns_per_item": 11.4126,
+          "chosen_ns_per_item": 4.5036
+        },
+        "heldout_product": {
+          "mask": 65,
+          "fusion_names": [
+            "constant+add",
+            "load_y+multiply"
+          ],
+          "speedup": 2.733421188873723,
+          "baseline_ns_per_item": 11.6154,
+          "chosen_ns_per_item": 4.2494
+        },
+        "heldout_subtract": {
+          "mask": 68,
+          "fusion_names": [
+            "constant+subtract",
+            "load_y+multiply"
+          ],
+          "speedup": 1.4440246454312953,
+          "baseline_ns_per_item": 4.9686,
+          "chosen_ns_per_item": 3.4408
+        }
+      }
+    },
+    "policy_gradient_seed_27": {
+      "geometric_mean_speedup": 1.8552255407053468,
+      "cases": {
+        "heldout_affine": {
+          "mask": 3,
+          "fusion_names": [
+            "constant+add",
+            "constant+multiply"
+          ],
+          "speedup": 1.268559204440333,
+          "baseline_ns_per_item": 4.3882,
+          "chosen_ns_per_item": 3.4592
+        },
+        "heldout_offset": {
+          "mask": 9,
+          "fusion_names": [
+            "constant+add",
+            "load_x+add"
+          ],
+          "speedup": 2.5287157670832223,
+          "baseline_ns_per_item": 11.4126,
+          "chosen_ns_per_item": 4.5132
+        },
+        "heldout_product": {
+          "mask": 65,
+          "fusion_names": [
+            "constant+add",
+            "load_y+multiply"
+          ],
+          "speedup": 2.733421188873723,
+          "baseline_ns_per_item": 11.6154,
+          "chosen_ns_per_item": 4.2494
+        },
+        "heldout_subtract": {
+          "mask": 132,
+          "fusion_names": [
+            "constant+subtract",
+            "multiply+add"
+          ],
+          "speedup": 1.3510441592342832,
+          "baseline_ns_per_item": 4.9686,
+          "chosen_ns_per_item": 3.6776
+        }
+      }
+    }
+  }
+}
