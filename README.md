@@ -68,3 +68,7 @@ python3 scripts/confirm.py --split stress
 ## Context
 
 Instruction fusion, also called a *superinstruction*, is an established interpreter technique. The [eJSTK study](https://www.jstage.jst.go.jp/article/ipsjjip/27/0/27_658/_article) is one example. RL for compiler decisions is also established, including Google's [MLGO](https://research.google/blog/mlgo-a-machine-learning-framework-for-compiler-optimization/). This project tests their intersection in a deliberately small and inspectable system. The related [CPU design search project](https://github.com/HassanAlhajAli/cpu-design-search) investigates hardware settings in gem5 rather than changing software bytecode.
+
+## AI-assisted development
+
+Codex assisted with the initial implementation, measurements, and documentation. The raw evidence and checks are included so the work can be reviewed and reproduced. Hassan's own review and any revisions will appear in later commits.
